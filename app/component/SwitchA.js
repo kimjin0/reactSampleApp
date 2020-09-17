@@ -5,7 +5,6 @@ import useStore from '~/stores/useStore';
 
 const AppSwitch = () => {
   const {switchA} = useStore();
-
   const [isEnabled, setIsEnabled] = useState(false);
   const toggleSwitch = () => {
     setIsEnabled((previousState) => !previousState);

@@ -6,22 +6,7 @@ import {useObserver} from 'mobx-react';
 const AppSwitch = () => {
   const {switchA} = useStore();
 
-  // const toggleSwitch = () => {
-  //   setIsEnabled((previousState) => !previousState);
-  //   setIsPage('B');
-  // };
-
-  // useEffect(() => {
-  //   console.log('Mount', switchA.isLed);
-  //   return () => {
-  //     console.log('unMount');
-  //   };
-  // }, []);
-
   useObserver(() => {
-    if (isPage === 'B') {
-      switchA.toggle(isEnabled);
-    }
     console.log('SwitchB loading...', switchA.isLed);
   });
 
@@ -31,7 +16,6 @@ const AppSwitch = () => {
         trackColor={{false: '#767577', true: '#81b0ff'}}
         thumbColor={!switchA.isLed ? '#f4f3f4' : '#f5dd4b'}
         ios_backgroundColor="#3e3e3e"
-        onValueChange={toggleSwitch}
         value={!switchA.isLed}
       />
     </View>
