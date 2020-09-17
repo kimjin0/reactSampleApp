@@ -3,7 +3,9 @@
  */
 
 import {AppRegistry} from 'react-native';
-import App from './AppSwipeNavi';
+import App from './app/App';
+// import App from './AppSwitch';
+// import App from './app/component/Switch';
 
 import {name as appName} from './app.json';
 
